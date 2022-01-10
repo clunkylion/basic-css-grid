@@ -1,17 +1,35 @@
 .container {
     border: 2px solid #24b4ce;
-    background-color: rgb(214, 19, 19);
+    background-color: rgb(255, 255, 255);
     display: grid;
-    gap: 35px;
-    grid-template-columns: 250px 250px;
-    grid-auto-rows: 250px 250px;
-    height: 600px;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 75px 75px 75px;
     place-content: center;
-    place-items: end;
+    grid-template-areas: 
+        "header header header"
+        "side main main"
+        "side main main"
+        ;
 }
 .item{
-    border: 5px solid #ffffff;
     font-size: 4rem;
-    background-color: rgb(3, 190, 19);
-
+}
+.item-1{
+    border: 5px solid #ffdbdb;
+    background-color: rgb(255, 212, 212);
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+}
+.item-2{
+    border: 5px solid #ffdbdb;
+    background-color: rgb(255, 202, 202);
+    grid-area: side;
+    /* grid-row: 2 / 4; */
+}
+.item-3{
+    border: 5px solid #ffdbdb;
+    background-color: rgb(255, 207, 193);
+    grid-area: main;
+    /* grid-area: 2 /2 /4/4; */
 }
